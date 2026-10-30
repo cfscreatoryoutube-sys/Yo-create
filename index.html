@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yo create | Monthly 3D printed toy boxes for kids and teens</title>
+<meta name="description" content="Yo create makes monthly boxes of 3D printed toys for kids (6-12) and teens (13+), made in the UK and shipped by Royal Mail.">
+<style>
+:root{
+  --base:#071a1f; --panel:#0d2a31; --line:#1b4650;
+  --teal:#19c8c8; --green:#5be37d; --text:#e8f7f6; --muted:#9fc3c4;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--text);font:17px/1.65 "Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font-weight:800;font-size:1.35rem;letter-spacing:-.02em;color:var(--text);text-decoration:none}
+.logo span{color:var(--teal)}
+nav a{margin-left:22px;color:var(--muted);text-decoration:none;font-weight:600}
+nav a:hover{color:var(--text)}
+.btn{display:inline-block;padding:13px 24px;border-radius:999px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn.primary{background:linear-gradient(90deg,var(--teal),var(--green));color:#042024}
+.btn.ghost{background:transparent;color:var(--text);border:2px solid var(--line)}
+.btn:hover{filter:brightness(1.08)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:56px 0 72px}
+h1{font-size:clamp(2.3rem,5.4vw,3.9rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 20px}
+.hero p{color:var(--muted);max-width:46ch;margin:0 0 28px}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap}
+.stage{background:var(--panel);border:1px solid var(--line);border-radius:28px;padding:20px 20px 24px}
+.stage svg{width:100%;height:auto;display:block}
+.stage .hint{display:flex;justify-content:space-between;align-items:center;margin-top:10px;color:var(--muted);font-size:.95rem}
+#ball{transform-box:fill-box}
+.fling #ball{animation:fling 1.2s cubic-bezier(.2,.7,.3,1) forwards}
+@keyframes fling{0%{transform:translate(0,0)}55%{transform:translate(170px,-90px)}100%{transform:translate(300px,20px);opacity:0}}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);letter-spacing:-.02em;line-height:1.15;margin:0 0 14px}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 34px}
+.boxes{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.box{border-radius:26px;padding:34px;background:var(--panel);border:1px solid var(--line)}
+.box.teen{background:linear-gradient(160deg,#0f3a41,#0d2a31 70%);border-color:#2a6f78;padding-block:42px}
+.price{font-size:2.6rem;font-weight:800;letter-spacing:-.03em;margin:6px 0}
+.box.kids .price{color:var(--green)}
+.box.teen .price{color:var(--teal)}
+.tag{display:inline-block;padding:4px 14px;border-radius:999px;background:#06161a;border:1px solid var(--line);color:var(--muted);font-size:.9rem;font-weight:600}
+.box ul{padding-left:20px;margin:16px 0 0;color:var(--muted)}
+.box li{margin:6px 0}
+.proto{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+.warning{border:2px solid var(--green);border-radius:20px;padding:24px;background:#0a2127}
+.warning strong{color:var(--green);font-size:1.15rem}
+.warning p{margin:8px 0 0;color:var(--text)}
+.team{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.team div{padding-left:18px;border-left:4px solid var(--teal)}
+.team div:last-child{border-color:var(--green)}
+.team h3{margin:0 0 4px}
+.team p{margin:0;color:var(--muted)}
+.cta{text-align:left}
+footer{border-top:1px solid var(--line);padding:30px 0 44px;color:var(--muted);font-size:.95rem}
+@media (max-width:760px){
+  .hero,.boxes,.proto,.team{grid-template-columns:1fr}
+  nav a{margin-left:14px}
+  .box{padding:26px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .fling #ball{animation:none;opacity:0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a class="logo" href="#top">Yo <span>create</span></a>
+    <nav aria-label="Main">
+      <a href="#boxes">Boxes</a>
+      <a href="#slinger">Prototype</a>
+      <a href="#join">Join</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1>Toys you build, test and play with. Every month.</h1>
+        <p>Yo create is a monthly box of 3D printed toys for kids and teens. Each toy is printed in the UK and posted to you by Royal Mail.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://sites.google.com/view/yocreate/contact-us">Join the waitlist</a>
+          <a class="btn ghost" href="#boxes">See the boxes</a>
+        </div>
+      </div>
+      <div class="stage">
+        <svg viewBox="0 0 400 240" role="img" aria-label="Drawing of the Slinger launcher with a rubber band between two teal triangles">
+          <rect x="0" y="196" width="400" height="4" rx="2" fill="#1b4650"/>
+          <polygon points="60,196 120,196 120,96" fill="#19c8c8"/>
+          <polygon points="240,196 300,196 240,96" fill="#5be37d"/>
+          <line x1="120" y1="104" x2="240" y2="104" stroke="#e8f7f6" stroke-width="5" stroke-linecap="round"/>
+          <circle id="ball" cx="180" cy="90" r="10" fill="#e8f7f6"/>
+        </svg>
+        <div class="hint">
+          <span>The Slinger, our first prototype</span>
+          <button class="btn ghost" id="flingBtn" type="button">Fling</button>
+        </div>
+      </div>
+    </div>
+
+    <section id="boxes">
+      <h2>One box a month. Two sizes.</h2>
+      <p class="lead">Every toy is designed with rounded corners. Pick the box that fits your age.</p>
+      <div class="boxes">
+        <article class="box kids">
+          <span class="tag">Ages 6-12</span>
+          <h3 style="margin:14px 0 0">Kids box</h3>
+          <div class="price">£12</div>
+          <p style="margin:0;color:var(--muted)">Hands-on mechanical toys to build, twist and explore. No flying.</p>
+          <ul><li>Smaller box</li><li>Rounded corners on every toy</li><li>First toy coming soon</li></ul>
+        </article>
+        <article class="box teen">
+          <span class="tag">Ages 13+</span>
+          <h3 style="margin:14px 0 0">Teen box</h3>
+          <div class="price">£25</div>
+          <p style="margin:0;color:var(--muted)">A bigger box with more freedom to play. Toys take short flights, and each one comes with a simple explanation of the science.</p>
+          <ul><li>Bigger box, longer builds</li><li>Adult supervision recommended</li><li>First toy: the Slinger</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="slinger">
+      <h2>Meet the Slinger</h2>
+      <div class="proto">
+        <div>
+          <p class="lead" style="margin-bottom:14px">Our first prototype is a launcher for the Teen box. Load a rubber band, aim and fling.</p>
+          <p style="color:var(--muted);margin:0">This is an early version, not the finished product, so the final design may change. Because it launches objects, an adult should always supervise.</p>
+        </div>
+        <div class="warning">
+          <strong>Warning!</strong>
+          <p>Not suitable for children under 13. Never point at people, animals or faces. Keep away from eyes. Use only the projectiles supplied. Check the rubber band before each use and stop using it if it’s worn or damaged. An adult should be supervising.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Made by a small team</h2>
+      <div class="team">
+        <div><h3>Squeeble</h3><p>CEO. Designs and models every toy, which can take hours to get right for just one box.</p></div>
+        <div><h3>Cole</h3><p>Co-owner and media manager. Writes everything online and runs the website, Reddit and YouTube.</p></div>
+      </div>
+    </section>
+
+    <section id="join" class="cta">
+      <h2>Be first to get a box</h2>
+      <p class="lead">Boxes won’t ship until the toys have passed their safety checks. Join the waitlist and we’ll tell you when the first box is ready.</p>
+      <a class="btn primary" href="https://sites.google.com/view/yocreate/contact-us">Contact us to sign up</a>
+    </section>
+  </main>
+
+  <footer>© 2026 Yo create. Made in the UK.</footer>
+</div>
+
+<script>
+(function(){
+  var stage=document.querySelector('.stage');
+  var btn=document.getElementById('flingBtn');
+  var ball=document.getElementById('ball');
+  btn.addEventListener('click',function(){
+    stage.classList.remove('fling');
+    void ball.getBoundingClientRect();
+    stage.classList.add('fling');
+    btn.textContent='Fling again';
+  });
+})();
+</script>
+</body>
+</html>
